@@ -1,0 +1,55 @@
+import {
+  faDrumstickBite as fasDrumstickBite,
+  faGlassMartiniAlt as fasGlassMartiniAlt,
+  faChevronRight as fasChevronRight,
+  faWineGlassAlt as fasWineGlassAlt,
+  faGlassWhiskey as fasGlassWhiskey,
+  faCookieBite as fasCookieBite,
+  faCocktail as fasCocktail,
+  faBookOpen as fasBookOpen,
+  faUtensils as fasUtensil,
+  faCarrot as fasCarrot,
+  faHeart as fasHeart,
+  faFish as fasFish,
+  faHome as fasHome,
+  faBook as fasBook,
+  faGlassCheers as fasGlassCheers,
+  faWineGlass as fasWineGlass,
+  faWineBottle as fasWineBottle,
+  faBlender as fasBlender,
+  faBeer as fasBeer,
+  faFlask as fasFlask,
+  faCoffee as fasCoffee,
+  faMugHot as fasMugHot,
+} from '@fortawesome/free-solid-svg-icons';
+
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+
+export default {
+  //Solid
+  fasDrumstickBite,
+  fasFish,
+  fasCarrot,
+  fasUtensil,
+  fasBookOpen,
+  fasCookieBite,
+  fasHeart,
+  fasChevronRight,
+  fasCocktail,
+  fasWineGlassAlt,
+  fasGlassMartiniAlt,
+  fasGlassWhiskey,
+  fasHome,
+  fasBook,
+  fasGlassCheers,
+  fasWineBottle,
+  fasWineGlass,
+  fasBlender,
+  fasBeer,
+  fasFlask,
+  fasCoffee,
+  fasMugHot,
+
+  //Regular
+  farHeart,
+};

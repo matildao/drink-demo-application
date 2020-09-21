@@ -1,0 +1,50 @@
+@import 'style/colors.scss';
+
+.card-wrapper {
+  border: 2px solid #f3f3f3;
+  background-color: white;
+  border-radius: 4px;
+  width: 18em;
+  margin: 1em;
+  flex-grow: 1;
+}
+
+.card-image {
+  //   border-top: 5px solid #f06672;
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.card-title {
+  color: $defaultText;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 14pt;
+}
+
+.like-button {
+  background-color: transparent;
+  color: $defaultButton;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+}
+
+.like-button:hover {
+  background-color: rgb(245, 245, 245);
+  color: $mainAccent;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.card-actions {
+  justify-content: space-between;
+  display: flex;
+}
+
+.card-content {
+  padding: 1em;
+}

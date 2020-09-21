@@ -1,0 +1,87 @@
+@import 'style/colors.scss';
+
+/* Shared Styling */
+.styled-button {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: turquoise;
+}
+
+/* Home Page */
+.home-page {
+  padding: 0 !important;
+}
+
+.home-page,
+.content {
+  padding: 2em;
+}
+
+.home-page img {
+  width: 100%;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3em;
+}
+
+.circle {
+  height: 170px;
+  width: 170px;
+  background-color: rgb(238, 137, 137);
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5em;
+  text-align: center;
+  line-height: 190px;
+}
+
+/* Lab */
+.lab {
+  background-color: rgb(242, 242, 242) !important;
+  height: 100vh;
+  padding: 3em;
+}
+
+/* Recipe Page */
+
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-toolbar {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.food-category-button {
+  background-color: rgb(216, 216, 216);
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  padding: 1em;
+  border: none;
+  margin: 1em;
+}
+
+.food-category-button:hover {
+  background-color: pink;
+}
+
+.active {
+  background-color: pink;
+}

@@ -1,0 +1,22 @@
+//Main color scheme
+$background: rgb(143, 143, 193);
+$mainAccent: #f06672;
+$color1: #efdcf3;
+$color2: #70c0ff;
+$color3: #02bbbc;
+$color4: #fbe52d;
+
+//Text
+$defaultText: rgb(147, 147, 147);
+
+//Buttons
+$defaultButton: rgb(160, 160, 160);
+$activeButton: red;
+
+//Corrections
+.right-content {
+  background-color: white;
+  height: 100vh;
+  padding: 4em;
+  overflow-y: scroll;
+}
