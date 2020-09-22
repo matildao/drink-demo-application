@@ -10,7 +10,6 @@
 }
 
 .card-image {
-  //   border-top: 5px solid #f06672;
   width: 90%;
   margin: auto;
   display: block;
@@ -25,7 +24,7 @@
 
 .like-button {
   background-color: transparent;
-  color: $defaultButton;
+  color: $mainAccent;
   border-radius: 50%;
   outline: none;
   border: none;

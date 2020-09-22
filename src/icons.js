@@ -21,6 +21,7 @@ import {
   faFlask as fasFlask,
   faCoffee as fasCoffee,
   faMugHot as fasMugHot,
+  faLongArrowAltLeft as fasLongArrowAltLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
@@ -49,6 +50,7 @@ export default {
   fasFlask,
   fasCoffee,
   fasMugHot,
+  fasLongArrowAltLeft,
 
   //Regular
   farHeart,

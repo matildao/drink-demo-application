@@ -11,3 +11,10 @@ export const fetchDrinksByCategory = (category) => {
     .then((data) => data)
     .catch((error) => console.log(error));
 };
+
+export const fetchSpecificDrink = (drinkId) => {
+  return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`)
+    .then((res) => res.json())
+    .then((data) => data)
+    .catch((error) => console.log(error));
+};

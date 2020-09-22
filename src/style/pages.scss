@@ -10,8 +10,19 @@
   cursor: pointer;
 }
 
+.right-content {
+  background-color: $background;
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 4em;
+}
+
 .styled-button:hover {
   background-color: turquoise;
+}
+
+.m-5em {
+  margin: 5em;
 }
 
 /* Home Page */
@@ -19,13 +30,27 @@
   padding: 0 !important;
 }
 
-.home-page,
-.content {
-  padding: 2em;
-}
-
 .home-page img {
   width: 100%;
+}
+
+.homepage-section-1 {
+  padding: 2em 2em 3em 3em;
+  text-align: center;
+}
+
+.homepage-section-2 {
+  padding: 5em;
+  background-color: $color1;
+  height: 30em;
+  text-align: center;
+}
+
+.homepage-section-3 {
+  padding: 5em;
+  background-color: $color2;
+  height: 30em;
+  text-align: center;
 }
 
 .circle-container {
@@ -37,7 +62,7 @@
 .circle {
   height: 170px;
   width: 170px;
-  background-color: rgb(238, 137, 137);
+  background-color: #36bd7f;
   color: white;
   border-radius: 50%;
   display: inline-block;
@@ -54,7 +79,6 @@
 }
 
 /* Recipe Page */
-
 .recipes-container {
   display: flex;
   flex-wrap: wrap;

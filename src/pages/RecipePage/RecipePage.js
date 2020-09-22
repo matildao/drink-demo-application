@@ -36,8 +36,6 @@ function RecipePage() {
     }
   });
 
-  console.log(state);
-
   const drinkCategories = [
     { category: 'ordinary_drink', icon: ['fas', 'glass-martini-alt'] },
     { category: 'cocktail', icon: ['fas', 'cocktail'] },
