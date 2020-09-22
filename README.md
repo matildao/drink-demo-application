@@ -1,13 +1,4 @@
-<!-- [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg -->
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 <!-- ![alt text](https://github.com/matildao/drink-demo-application/blob/master/public/vue_image_gallery.png "Image is currently not available") -->
 
@@ -15,7 +6,7 @@ This work is licensed under a
 
 # React Drink/Cocktail Demo Application
 
-This is an demo application for displaying cocktails and drinks. The application uses the CocktailDB API with the test key for development.
+This is a demo application for displaying cocktails and drinks. The application uses the CocktailDB API with the test key for development.
 
 &nbsp;
 
@@ -75,3 +66,18 @@ npm start
 2. Run `npm install` to install the necessary packages
 
 3. Run `npm start` to start the application
+
+&nbsp;
+
+### License
+
+---
+
+This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
