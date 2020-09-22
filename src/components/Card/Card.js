@@ -1,36 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import './Card.scss';
 
 const Card = (props) => {
-  const favoriteDrink = (drinkId) => {
-    let savedFavorites = window.localStorage.getItem('favorites')
-      ? JSON.parse(window.localStorage.getItem('favorites'))
-      : null;
+  const [favorites, setFavorites] = useState([]);
 
-    //if exists in localstorage then fetch it and parse -> add -> put back
-    //else create storage/name and add object
-    if (!savedFavorites) {
-    } else {
+  const favoriteOrUnfavoriteDrink = (drinkId) => {
+    let savedFavorites = localStorage.getItem('favorites')
+      ? JSON.parse(localStorage.getItem('favorites'))
+      : favorites;
+    let alreadyFavorited = false;
+
+    savedFavorites.forEach((id) => {
+      if (id === drinkId) {
+        alreadyFavorited = true;
+        savedFavorites.splice(favorites.indexOf(id), 1);
+      }
+    });
+
+    if (!alreadyFavorited) {
       savedFavorites.push(drinkId);
-      window.localStorage.setItem('favorites', JSON.stringify(savedFavorites));
     }
+
+    setFavorites([...savedFavorites]);
+    localStorage.setItem('favorites', JSON.stringify(savedFavorites));
   };
 
-  let test = false;
+  const isFavorited = (id) => {
+    let favorited = JSON.parse(window.localStorage.getItem('favorites')) || null;
 
-  const checkFavorite = (drinkId) => {
-    let favorites = window.localStorage.getItem('favorites')
-      ? JSON.parse(window.localStorage.getItem('favorites'))
-      : null;
-
-    console.log('fav', favorites);
-
-    if (favorites.include(drinkId)) {
-      return (test = true);
+    if (favorited && favorited.includes(id)) {
+      return true;
     }
-    return test;
+    return false;
   };
 
   return (
@@ -39,8 +42,11 @@ const Card = (props) => {
       <img className="card-image" src={props.cardItem.strDrinkThumb}></img>
       <div className="card-content">
         <div className="card-actions">
-          <button className="like-button">
-            {test ? (
+          <button
+            className="like-button"
+            onClick={() => favoriteOrUnfavoriteDrink(props.cardItem.idDrink)}
+          >
+            {isFavorited(props.cardItem.idDrink) ? (
               <FontAwesomeIcon icon={['fas', 'heart']} size="2x" />
             ) : (
               <FontAwesomeIcon icon={['far', 'heart']} size="2x" />
