@@ -50,8 +50,6 @@ This is an demo application for displaying cocktails and drinks. The application
 
 ---
 
-&nbsp;
-
 #### Installs the project packages
 
 ```
