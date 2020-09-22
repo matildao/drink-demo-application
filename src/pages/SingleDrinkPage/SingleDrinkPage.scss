@@ -1,0 +1,66 @@
+@import 'style/colors.scss';
+@import 'style/mixins.scss';
+
+.single-drink-page {
+  background-color: $paper;
+  overflow-y: scroll;
+  display: flex;
+  padding: 4em;
+  height: 40em;
+  margin: 2em;
+}
+
+.drink-wrapper {
+  @include flex-row;
+  flex-grow: 1;
+}
+
+.drink-image {
+  width: 30em;
+  flex-grow: 1;
+}
+
+.drink-list {
+  @include flex-col;
+  flex-grow: 1;
+}
+
+.ingredient-list {
+  background-color: $backgroundAccent;
+  margin: 3em 2em 0 0;
+  flex-grow: 1;
+}
+
+.ingredient-list-row {
+  @include flex-row;
+  padding: 1em 2em 0 2em;
+  justify-content: space-between;
+}
+
+.drink-instructions {
+  margin-right: 2em;
+  text-align: justify;
+}
+
+.drink-information {
+  @include flex-col;
+}
+
+.drink-tag-wrapper {
+  @include flex-row;
+  margin-top: 1em;
+}
+
+.drink-tag {
+  background-color: $mainAccent;
+  color: $darkerAccent;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+
+.alcoholic-tag {
+  background-color: $color3;
+  margin-right: 2em;
+  color: $paper;
+  padding: 1em;
+}

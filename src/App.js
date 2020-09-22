@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import RecipePage from './pages/RecipePage/RecipePage';
 import Lab from './pages/Lab';
+import SingleDrinkPage from 'pages/SingleDrinkPage/SingleDrinkPage';
 
 const routes = [
   { label: 'Home', link: '/', icon: ['fas', 'home'] },
@@ -26,7 +27,7 @@ function App() {
               <Route exact path="/recipes" component={RecipePage} />
               <Route exact path="/recipes" component={RecipePage} />
               <Route exact path="/recipes" component={RecipePage} />
-              <Route exact path="/recipes/:drink" component={Lab} />
+              <Route exact path="/recipes/:drink" component={SingleDrinkPage} />
               <Route exact path="/lab" component={Lab} />
             </Switch>
           </div>
