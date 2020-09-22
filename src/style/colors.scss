@@ -1,22 +1,22 @@
 //Main color scheme
-$background: rgb(143, 143, 193);
+$background: #f1f1f1;
+$backgroundAccent: #f0f0f0;
 $mainAccent: #f06672;
+$darkerAccent: #872c33;
+$lighterAccent: #ee8989;
+
+//Cards and Paper
+$paper: #ffffff;
+
+//Colors for color pattern
 $color1: #efdcf3;
 $color2: #70c0ff;
-$color3: #02bbbc;
+$color3: #40e7c9;
 $color4: #fbe52d;
 
 //Text
-$defaultText: rgb(147, 147, 147);
+$defaultText: #939393;
 
 //Buttons
-$defaultButton: rgb(160, 160, 160);
+$defaultButton: #a0a0a0;
 $activeButton: red;
-
-//Corrections
-.right-content {
-  background-color: white;
-  height: 100vh;
-  padding: 4em;
-  overflow-y: scroll;
-}
