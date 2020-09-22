@@ -7,60 +7,56 @@ function HomePage() {
     <div className="right-content home-page">
       <img className="" src={require('../../images/drinks.jpg')} />
       <div className="content">
-        <div className="circle-container">
-          <div className="circle">
-            <FontAwesomeIcon icon={['fas', 'utensils']} size="4x" />
+        <div className="homepage-section-1">
+          <div className="circle-container">
+            <div className="circle">
+              <FontAwesomeIcon icon={['fas', 'glass-martini-alt']} size="4x" />
+            </div>
+            <div className="circle">
+              <FontAwesomeIcon icon={['fas', 'heart']} size="4x" />
+            </div>
+            <div className="circle">
+              <FontAwesomeIcon icon={['fas', 'glass-cheers']} size="4x" />
+            </div>
+            <div className="circle">
+              <FontAwesomeIcon icon={['fas', 'wine-bottle']} size="4x" />
+            </div>
           </div>
-          <div className="circle">
-            <FontAwesomeIcon icon={['fas', 'book-open']} size="4x" />
-          </div>
-          <div className="circle">
-            <FontAwesomeIcon icon={['fas', 'cookie-bite']} size="4x" />
-          </div>
-          <div className="circle">
-            <FontAwesomeIcon icon={['fas', 'carrot']} size="4x" />
+          <div className="m-5em">
+            <h1>Drinks & Cocktails</h1>
+            <p>
+              A cocktail is a kind of mixed drink. Usually, it is made with alcoholic drinks such as
+              vodka, gin or rum. Since such spirits do not have much taste of their own (at around
+              40% alcohol), other ingredients are added. Common ingredients are fruits, fruit juice,
+              sugar, crushed ice, and ice cubes. If the cocktail is served in a bar or nightclub, it
+              often comes with a piece of fruit on top. For example, a gin and tonic could have a
+              lemon, a Piña Colada could have a pineapple and a cherry. A popular cocktail in
+              Cornwall UK is the McVey, 440ml of strongbow and 125ml of Malibu. Most cocktails were
+              invented in the late 19th or early 20th centuries. People began drinking a lot of
+              cocktails in the United States in the 1920s due to Prohibition. Around that time,
+              cocktails from Cuba, such as the mojito, became popular around the world. Cocktails
+              made without alcohol are also made. Because all the ingredients give their flavor to
+              the finished drink, a cocktail is only as good as the worst ingredient.
+            </p>
+            <p>
+              Fetched from wikipedia article:{' '}
+              <a href="https://simple.wikipedia.org/wiki/Cocktail">
+                https://simple.wikipedia.org/wiki/Cocktail
+              </a>
+            </p>
           </div>
         </div>
-        <div>
-          This i an application made in React for finding recipes Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nunc congue metus sed lectus varius, quis sollicitudin lorem
-          ornare. Integer sed nulla feugiat, laoreet neque eu, varius quam. Proin sit amet massa at
-          metus lobortis aliquet. Nulla in enim nec odio vestibulum euismod a sodales lorem. Ut id
-          interdum sem. Praesent rhoncus quis arcu sit amet vulputate. Ut elementum tortor lectus,
-          id sollicitudin justo venenatis vitae. Mauris facilisis, velit ullamcorper placerat
-          tincidunt, augue ligula imperdiet nibh, nec malesuada dolor lorem eget quam. Pellentesque
-          justo lorem, laoreet vehicula elementum eget, aliquet sit amet augue. Fusce faucibus ipsum
-          at velit cursus facilisis. Sed posuere risus non magna semper consequat. Phasellus
-          scelerisque urna sed augue molestie euismod. Mauris eget malesuada metus. Fusce non
-          pharetra arcu, egestas accumsan justo. Nullam urna justo, fermentum et tincidunt et,
-          mattis non nibh. Donec pretium lorem nec sapien sollicitudin, in molestie lectus aliquet.
-          Nullam faucibus malesuada varius. Nunc cursus metus vitae tortor viverra, a aliquam orci
-          gravida. Sed at tellus a lorem sollicitudin rhoncus. Suspendisse laoreet urna sit amet
-          ante porttitor fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Duis sed elementum augue. Morbi convallis ipsum at ex pharetra, tempus finibus nisi
-          tempor. Nulla tincidunt lacinia massa sit amet tempus. Curabitur rhoncus lobortis ipsum ut
-          condimentum. Maecenas dui tellus, mattis at consectetur ac, convallis ut tellus. Nunc a
-          nisi et nibh porttitor interdum ac vel est. Maecenas dictum orci nunc, cursus rhoncus
-          lectus bibendum id. In ut venenatis erat, id congue velit. Suspendisse ultrices ultrices
-          dui vel lacinia. Ut et rutrum quam. Proin arcu lacus, varius vitae commodo ac, convallis
-          sit amet quam. Ut id ultrices erat. Sed congue feugiat iaculis. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Vestibulum justo risus, consectetur sed suscipit in,
-          varius sit amet purus. Nam nisl massa, faucibus sit amet ex at, accumsan sollicitudin
-          urna. Nullam porta pretium mauris, id ullamcorper arcu tempus a. In molestie lectus eu
-          dapibus lobortis. Maecenas eu mi commodo, pretium tellus id, blandit libero. Aenean
-          blandit nisi ac lorem accumsan, sit amet fermentum metus porta. Nulla molestie lacinia
-          felis vitae porta. Praesent at nisl id tellus auctor congue ac sit amet metus. Fusce lacus
-          ligula, posuere hendrerit finibus nec, semper at massa. Vivamus in mattis lacus, at
-          finibus eros. Integer lacinia nisi sit amet quam tempor, ac maximus velit condimentum.
-          Morbi accumsan sagittis risus, laoreet aliquam enim tempor eu. Nulla tristique ut nulla
-          sed convallis. Morbi tincidunt nisi nunc, non convallis ante ultrices at. Integer magna
-          magna, tempor eget efficitur quis, laoreet non augue. Morbi arcu est, scelerisque eu
-          tempus ultrices, sollicitudin in est. Etiam sollicitudin urna in justo consectetur, vel
-          sollicitudin eros dapibus. Nulla non commodo turpis, quis congue nibh. Nullam ut rutrum
-          sem. Cras tristique suscipit metus. Phasellus rutrum placerat quam, non facilisis est
-          dapibus sed. Vestibulum in justo efficitur, efficitur sem ut, venenatis nibh. Nam sed
-          dolor sit amet tellus euismod convallis. Nam vestibulum, mi nec fermentum sodales, orci
-          ligula cursus ex, dictum hendrerit quam elit in augue.
+
+        <div className="homepage-section-2">
+          <h1>About This Page</h1>
+          <div>
+            This i an application made in React for finding recipes of drinks. It is created as a
+            demo project showcasing various techniques both visually and functional. The page
+            simulates an application where you can{' '}
+          </div>
+        </div>
+        <div className="homepage-section-3">
+          <h1>CocktailDB</h1>
         </div>
       </div>
     </div>
