@@ -53,8 +53,8 @@ const Card = (props) => {
             )}
           </button>
           <button className="like-button">
-            <Link to={`/recipes/${props.cardItem.idDrink}`}>
-              <FontAwesomeIcon icon={['fas', 'chevron-right']} size="2x" />
+            <Link className="single-recipe-link" to={`/recipes/${props.cardItem.idDrink}`}>
+              <FontAwesomeIcon icon={['fas', 'book-open']} size="2x" />
             </Link>
           </button>
         </div>
