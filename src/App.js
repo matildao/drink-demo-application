@@ -30,6 +30,7 @@ function App() {
               <Route exact path="/recipes/:drink" component={SingleDrinkPage} />
               <Route exact path="/lab" component={Lab} />
             </Switch>
+            <div className="footer-wrapper">FOOTER</div>
           </div>
         </div>
       </Router>

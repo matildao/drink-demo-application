@@ -4,7 +4,7 @@
   background-color: rgb(31, 31, 31);
   display: flex;
   flex-direction: column;
-  width: 15em;
+  width: 12em;
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -20,8 +20,11 @@
   font-size: 14pt;
   color: White;
   flex-grow: 1;
-  padding: 3em;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .nav-item:hover {
@@ -30,7 +33,7 @@
 }
 
 .nav-image {
-  height: 16em;
+  height: 13em;
 }
 
 .selected {
