@@ -24,7 +24,7 @@ import {
   faLongArrowAltLeft as fasLongArrowAltLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as farHeart, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
 export default {
   //Solid
@@ -54,4 +54,5 @@ export default {
 
   //Regular
   farHeart,
+  farStar,
 };

@@ -1,4 +1,5 @@
 @import 'style/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 /* Shared Styling */
 .styled-button {
@@ -37,6 +38,10 @@
 .homepage-section-1 {
   padding: 2em 2em 3em 3em;
   text-align: center;
+}
+
+.homepage-section-1 h1 {
+  font-family: 'Permanent Marker', cursive;
 }
 
 .homepage-section-2 {
@@ -108,4 +113,29 @@
 
 .active {
   background-color: pink;
+}
+
+.center-on-image {
+  position: absolute;
+  animation: fadeIn ease 4s;
+  top: 30%;
+  left: 25%;
+  font-size: 6em;
+  transform: translate(-50%, -50%);
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  transform: rotate(-5deg);
+}
+
+.image-text-container {
+  position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -5,7 +5,11 @@ import 'style/pages.scss';
 function HomePage() {
   return (
     <div className="right-content home-page">
-      <img className="" src={require('../../images/drinks.jpg')} />
+      <div className="image-text-container">
+        <img src={require('../../images/drinks.jpg')} />
+        <p className="center-on-image">Cocktails & Drink Recipes</p>
+      </div>
+
       <div className="content">
         <div className="homepage-section-1">
           <div className="circle-container">

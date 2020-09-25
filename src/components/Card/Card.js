@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './Card.scss';
+import { setFavorites } from 'reduxStore/favoriteActions';
+import { useDispatch } from 'react-redux';
 
 const Card = (props) => {
-  const [favorites, setFavorites] = useState([]);
+  const dispatch = useDispatch();
+  const store = useSelector((store) => store.favorites);
 
   const favoriteOrUnfavoriteDrink = (drinkId) => {
-    let savedFavorites = localStorage.getItem('favorites')
-      ? JSON.parse(localStorage.getItem('favorites'))
-      : favorites;
     let alreadyFavorited = false;
+    let copyStateFavorites = store.favorites !== undefined ? store.favorites : [];
 
-    savedFavorites.forEach((id) => {
+    copyStateFavorites.forEach((id) => {
       if (id === drinkId) {
         alreadyFavorited = true;
-        savedFavorites.splice(favorites.indexOf(id), 1);
+        copyStateFavorites.splice(store.favorites.indexOf(id), 1);
       }
     });
 
     if (!alreadyFavorited) {
-      savedFavorites.push(drinkId);
+      copyStateFavorites.push(drinkId);
     }
 
-    setFavorites([...savedFavorites]);
-    localStorage.setItem('favorites', JSON.stringify(savedFavorites));
+    dispatch(setFavorites(copyStateFavorites));
   };
 
   const isFavorited = (id) => {
-    let favorited = JSON.parse(window.localStorage.getItem('favorites')) || null;
-
-    if (favorited && favorited.includes(id)) {
+    if (store.favorites !== undefined && store.favorites.includes(id)) {
       return true;
     }
     return false;
@@ -51,6 +50,11 @@ const Card = (props) => {
             ) : (
               <FontAwesomeIcon icon={['far', 'heart']} size="2x" />
             )}
+          </button>
+          <button className="like-button">
+            <Link className="single-recipe-link" to={`/recipes/${props.cardItem.idDrink}`}>
+              <FontAwesomeIcon icon={['far', 'star']} size="2x" />
+            </Link>
           </button>
           <button className="like-button">
             <Link className="single-recipe-link" to={`/recipes/${props.cardItem.idDrink}`}>

@@ -1,75 +1,62 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import 'style/pages.scss';
-import { fetchDrinks, fetchDrinksByCategory } from 'actions/recipes';
+import { drinkCategoriesWithIcons } from 'utils/categories';
+import { useSelector } from 'react-redux';
 import Card from 'components/Card/Card';
+import 'style/pages.scss';
 
 function RecipePage() {
+  const allCategories = useSelector((store) => store.drinks);
+  const firstCategory = useSelector((store) => store.drinks.ordinary_drink);
+
   const initialState = {
-    recipes: [],
+    displayCategory: [],
     active: 0,
   };
+
   const [state, setState] = useState(initialState);
-  const handleChange = (name, value) => {
-    setState({ ...state, [name]: value });
-  };
 
-  const handleMultiple = (change) => {
-    setState(change);
-  };
-
-  const getRecipies = () => {
-    fetchDrinks().then((res) => {
-      handleChange('recipes', res.drinks);
-    });
-  };
-
-  const getCategory = (index, category) => {
-    fetchDrinksByCategory(category).then((res) => {
-      handleMultiple({ recipes: res.drinks, active: index });
-    });
-  };
-
-  useEffect(() => {
-    if (state.recipes && state.recipes.length === 0) {
-      getRecipies();
+  const sortByCategory = (index, drinkCategory, categories) => {
+    for (const key in categories) {
+      if (key === drinkCategory) {
+        setState({
+          ...state,
+          displayCategory: categories[key],
+          active: index,
+        });
+      }
     }
-  });
-
-  const drinkCategories = [
-    { category: 'ordinary_drink', icon: ['fas', 'glass-martini-alt'] },
-    { category: 'cocktail', icon: ['fas', 'cocktail'] },
-    { category: 'punch / party_drink', icon: ['fas', 'wine-glass-alt'] },
-    { category: 'milk / Float / Shake', icon: ['fas', 'blender'] },
-    { category: 'shot', icon: ['fas', 'glass-whiskey'] },
-    { category: 'homemade liqueur', icon: ['fas', 'flask'] },
-    { category: 'beer', icon: ['fas', 'beer'] },
-    { category: 'coffee / tea', icon: ['fas', 'coffee'] },
-    { category: 'cocoa', icon: ['fas', 'mug-hot'] },
-  ];
+  };
 
   return (
     <div className="right-content recipe-page">
       <div className="content">
         <h1>Drink Recipes</h1>
         <div className="action-toolbar ">
-          {drinkCategories.map(({ icon, category }, index) => (
+          {drinkCategoriesWithIcons.map(({ icon, category }, index) => (
             <button
               key={index}
-              onClick={() => getCategory(index, category)}
+              onClick={() => sortByCategory(index, category, allCategories)}
               className={`food-category-button ${state.active === index ? 'active' : ''}`}
             >
               <FontAwesomeIcon icon={[icon[0], icon[1]]} size="2x" />
             </button>
           ))}
         </div>
-        {state.recipes && (
-          <div className="recipes-container">
-            {state.recipes.map((drink) => {
+
+        <div className="recipes-container">
+          {firstCategory &&
+            state.displayCategory.length === 0 &&
+            firstCategory.map((drink) => {
               return <Card key={drink.strDrink} cardItem={drink} />;
             })}
-          </div>
-        )}
+
+          {firstCategory &&
+            state.displayCategory.length !== 0 &&
+            state.displayCategory.map((drink) => {
+              return <Card key={drink.strDrink} cardItem={drink} />;
+            })}
+        </div>
       </div>
     </div>
   );
