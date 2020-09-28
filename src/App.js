@@ -8,13 +8,11 @@ import HomePage from './pages/HomePage/HomePage';
 import RecipePage from './pages/RecipePage/RecipePage';
 import Lab from './pages/Lab';
 import SingleDrinkPage from 'pages/SingleDrinkPage/SingleDrinkPage';
-import FavoritesPage from 'pages/FavoritesPage/FavoritesPage';
 import './App.scss';
 
 const routes = [
   { label: 'Home', link: '/', icon: ['fas', 'home'] },
   { label: 'Recipes', link: '/recipes', icon: ['fas', 'glass-martini-alt'] },
-  { label: 'Favorites', link: '/favorites', icon: ['fas', 'heart'] },
   { label: 'Random', link: '/random', icon: ['fas', 'glass-cheers'] },
   { label: 'Bar', link: '/bar', icon: ['fas', 'glass-whiskey'] },
 ];
@@ -51,7 +49,6 @@ function App() {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/recipes" component={RecipePage} />
-              <Route exact path="/favorites" component={FavoritesPage} />
               <Route exact path="/bars" component={RecipePage} />
               <Route exact path="/recipes/:drink" component={SingleDrinkPage} />
               <Route exact path="/lab" component={Lab} />

@@ -1,0 +1,41 @@
+/* Recipe Page */
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-toolbar {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.food-category-button {
+  background-color: rgb(216, 216, 216);
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  padding: 1em;
+  border: none;
+  margin: 1em;
+}
+
+.no-favorites {
+  margin: 2em;
+  font-size: 15pt;
+}
+
+.favorite-category-button {
+  margin-left: auto;
+}
+
+.food-category-button:hover {
+  transition: all 1.5s ease;
+  background-color: pink;
+}
+
+.active {
+  background-color: pink;
+}

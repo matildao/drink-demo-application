@@ -22,6 +22,7 @@ import {
   faCoffee as fasCoffee,
   faMugHot as fasMugHot,
   faLongArrowAltLeft as fasLongArrowAltLeft,
+  faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faHeart as farHeart, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
@@ -51,6 +52,7 @@ export default {
   fasCoffee,
   fasMugHot,
   fasLongArrowAltLeft,
+  faGraduationCap,
 
   //Regular
   farHeart,
