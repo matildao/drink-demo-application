@@ -43,7 +43,7 @@ function HomePage() {
               the finished drink, a cocktail is only as good as the worst ingredient.
             </p>
             <p>
-              Fetched from wikipedia article:{' '}
+              Fetched from wikipedia article:
               <a href="https://simple.wikipedia.org/wiki/Cocktail">
                 https://simple.wikipedia.org/wiki/Cocktail
               </a>
@@ -56,11 +56,24 @@ function HomePage() {
           <div>
             This i an application made in React for finding recipes of drinks. It is created as a
             demo project showcasing various techniques both visually and functional. The page
-            simulates an application where you can{' '}
+            simulates an application where you can
           </div>
         </div>
         <div className="homepage-section-3">
           <h1>CocktailDB</h1>
+          <div>
+            This application uses the free CocktailDB API found at:
+            <a href="https://www.thecocktaildb.com/api.php">
+              https://www.thecocktaildb.com/api.php
+            </a>
+            for the various features that exist on this page.
+            <div>
+              <p>✦ See all categories of drinks</p>
+              <p>✦ Save your favorites (localstorage)</p>
+              <p>✦ Blend a drink from the ingredients from CocktailDB</p>
+              <p>✦ "Date a drink" Look at random drinks and tinder your way around them</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
