@@ -1,4 +1,4 @@
-import { fetchRecipes } from './recipeActions';
+import { fetchRecipes } from './recipeReducer';
 
 export const fetchCategory = (category) => {
   return (dispatch) => {

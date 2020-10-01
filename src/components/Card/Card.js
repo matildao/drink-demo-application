@@ -2,34 +2,39 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import './Card.scss';
-import { setFavorites } from 'reduxStore/favoriteActions';
+import { setFavorites } from 'reduxStore/favoritesReducer';
+import { setTested } from 'reduxStore/testedReducer';
 import { useDispatch } from 'react-redux';
+import './Card.scss';
 
 const Card = (props) => {
   const dispatch = useDispatch();
-  const store = useSelector((store) => store.favorites);
+  const store = useSelector((store) => store);
 
-  const favoriteOrUnfavoriteDrink = (drinkId) => {
-    let alreadyFavorited = false;
-    let copyStateFavorites = store.favorites !== undefined ? store.favorites : [];
+  const setTestedOrFavorites = (drinkId, type) => {
+    let exists = false;
+    let storeCopy = store[type][type] !== undefined ? store[type][type] : [];
 
-    copyStateFavorites.forEach((id) => {
+    storeCopy.forEach((id) => {
       if (id === drinkId) {
-        alreadyFavorited = true;
-        copyStateFavorites.splice(store.favorites.indexOf(id), 1);
+        exists = true;
+        storeCopy.splice(store[type][type].indexOf(id), 1);
       }
     });
 
-    if (!alreadyFavorited) {
-      copyStateFavorites.push(drinkId);
+    if (!exists) {
+      storeCopy.push(drinkId);
     }
 
-    dispatch(setFavorites(copyStateFavorites));
+    if (type === 'tested') {
+      dispatch(setTested(storeCopy));
+    } else if (type === 'favorites') {
+      dispatch(setFavorites(storeCopy));
+    }
   };
 
-  const isFavorited = (id) => {
-    if (store.favorites !== undefined && store.favorites.includes(id)) {
+  const checkIfFavoritedOrTested = (id, type) => {
+    if (store[type][type] !== undefined && store[type][type].includes(id)) {
       return true;
     }
     return false;
@@ -43,18 +48,24 @@ const Card = (props) => {
         <div className="card-actions">
           <button
             className="like-button"
-            onClick={() => favoriteOrUnfavoriteDrink(props.cardItem.idDrink)}
+            onClick={() => setTestedOrFavorites(props.cardItem.idDrink, 'favorites')}
           >
-            {isFavorited(props.cardItem.idDrink) ? (
+            {checkIfFavoritedOrTested(props.cardItem.idDrink, 'favorites') ? (
               <FontAwesomeIcon icon={['fas', 'heart']} size="2x" />
             ) : (
               <FontAwesomeIcon icon={['far', 'heart']} size="2x" />
             )}
           </button>
-          <button className="like-button">
-            <Link className="single-recipe-link" to={`/recipes/${props.cardItem.idDrink}`}>
-              <FontAwesomeIcon icon={['far', 'star']} size="2x" />
-            </Link>
+
+          <button
+            className="like-button"
+            onClick={() => setTestedOrFavorites(props.cardItem.idDrink, 'tested')}
+          >
+            {checkIfFavoritedOrTested(props.cardItem.idDrink, 'tested') ? (
+              <FontAwesomeIcon className="testedIcon" icon={['fas', 'star']} size="2x" />
+            ) : (
+              <FontAwesomeIcon className="testedIcon" icon={['far', 'star']} size="2x" />
+            )}
           </button>
           <button className="like-button">
             <Link className="single-recipe-link" to={`/recipes/${props.cardItem.idDrink}`}>

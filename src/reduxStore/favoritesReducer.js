@@ -1,5 +1,12 @@
-export const FAVORITE = 'FAVORITE';
 export const SET_FAVORITES = 'SET_FAVORITES';
+export const SET_TESTED = 'SET_TESTED';
+
+export const setFavorites = (favorites) => {
+  return {
+    type: SET_FAVORITES,
+    payload: favorites,
+  };
+};
 
 const reducer = (state = {}, action) => {
   switch (action.type) {
