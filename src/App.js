@@ -9,12 +9,14 @@ import RecipePage from './pages/RecipePage/RecipePage';
 import Lab from './pages/Lab';
 import SingleDrinkPage from 'pages/SingleDrinkPage/SingleDrinkPage';
 import './App.scss';
+import RandomPage from './pages/RandomPage/RandomPage';
+import SuggestPage from './pages/SuggestPage/SuggestPage';
 
 const routes = [
   { label: 'Home', link: '/', icon: ['fas', 'home'] },
   { label: 'Recipes', link: '/recipes', icon: ['fas', 'glass-martini-alt'] },
-  { label: 'Random', link: '/random', icon: ['fas', 'glass-cheers'] },
-  { label: 'Bar', link: '/bar', icon: ['fas', 'glass-whiskey'] },
+  { label: 'Blend Me A Drink', link: '/random-drink', icon: ['fas', 'glass-cheers'] },
+  { label: 'Date A Drink', link: '/suggest-me', icon: ['fas', 'glass-whiskey'] },
 ];
 
 function App() {
@@ -49,8 +51,9 @@ function App() {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/recipes" component={RecipePage} />
-              <Route exact path="/bars" component={RecipePage} />
+              <Route exact path="/random-drink" component={RandomPage} />
               <Route exact path="/recipes/:drink" component={SingleDrinkPage} />
+              <Route exact path="/suggest-me" component={SuggestPage} />
               <Route exact path="/lab" component={Lab} />
             </Switch>
           </div>

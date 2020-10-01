@@ -1,0 +1,24 @@
+@import 'style/mixins.scss';
+
+.history-bar {
+  @include flex-col;
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgb(216, 216, 216);
+  overflow-y: scroll;
+  height: 77.8vh;
+}
+
+.history-bar-item {
+  height: 10em;
+  text-align: center;
+  flex-shrink: 0;
+  padding: 1em;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.history-bar-image {
+  width: 6em;
+  height: 6em;
+}

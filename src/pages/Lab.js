@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from 'components/Card/Card';
+import HistoryBar from 'components/HistoryBar/HistoryBar';
+
 import SingleDrinkPage from 'pages/SingleDrinkPage/SingleDrinkPage';
 import 'style/pages.scss';
 
@@ -68,11 +70,23 @@ function Lab() {
     dateModified: '2015-08-18 14:42:59',
   };
 
+  let historyBarList = [
+    {
+      strDrink: 'Juice',
+      drinkImage: 'https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg',
+    },
+    {
+      strDrink: 'Juice',
+      drinkImage: 'https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg',
+    },
+  ];
+
   return (
     <div className="right-content lab">
       <h1>Lab Page</h1>
       <Card cardItem={tempCardItem} />
-      <SingleDrinkPage drink={temp} />
+      {/* <SingleDrinkPage drink={temp} /> */}
+      <HistoryBar historyBarList={historyBarList} />
     </div>
   );
 }

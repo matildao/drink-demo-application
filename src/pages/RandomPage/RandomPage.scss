@@ -1,0 +1,51 @@
+.random-page {
+  background-image: url('images/side_drinks.jpg');
+}
+
+.random-drink-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+}
+
+.random-drink-list-container {
+  transform: translate(-50%, -50%);
+  background-color: white;
+  position: absolute;
+  height: 40em;
+  display: flex;
+  margin: auto;
+  flex-grow: 1;
+  width: 50%;
+  left: 55%;
+  top: 50%;
+}
+
+.random-drink-ingredient-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.blend-drink-button {
+  margin: 2em;
+  padding: 2em;
+  border: none;
+  font-size: 16pt;
+  background-color: pink;
+  color: rgb(255, 255, 255);
+  outline: none;
+
+  font-family: 'Permanent Marker', cursive;
+}
+
+.blend-drink-button:hover {
+  cursor: pointer;
+}
+
+.ingredient-measure {
+  display: flex;
+  justify-content: space-between;
+}

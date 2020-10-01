@@ -3,7 +3,6 @@ import 'style/pages.scss';
 import './SingleDrinkPage.scss';
 import { fetchSpecificDrink } from 'actions/recipes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Redirect } from 'react-router-dom';
 
 function SingleDrinkPage(props) {
   const parseIngredientsAndMeasurements = (drinkObject) => {
@@ -51,11 +50,10 @@ function SingleDrinkPage(props) {
 
   return (
     <div>
-      <button onClick={() => returnToRoute()} className="back-icon">
-        <FontAwesomeIcon icon={['fas', 'long-arrow-alt-left']} size="2x" />{' '}
-      </button>
-
       <div className="single-drink-page">
+        <button onClick={() => returnToRoute()} className="back-icon">
+          <FontAwesomeIcon icon={['fas', 'long-arrow-alt-left']} size="2x" />{' '}
+        </button>
         <div className="full-cover-drink-image"></div>
         <div className="drink-wrapper">
           <div className="drink-list">

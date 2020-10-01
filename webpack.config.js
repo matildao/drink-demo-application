@@ -18,6 +18,7 @@ module.exports = () => {
       filename: 'bundle.js',
       publicPath: '/',
     },
+    devtool: '#eval-source-map',
     resolve: {
       modules: [path.resolve('./src'), path.resolve('./node_modules')],
     },
