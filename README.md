@@ -6,7 +6,9 @@
 
 # React Drink/Cocktail Demo Application
 
-This is a demo application for displaying cocktails and drinks. The application uses the CocktailDB API with the test key for development.
+This is a demo application for displaying cocktails and drinks. The application uses the CocktailDB API with the test key for development. It is built as a demo application for showcasing different techniques using React, Redux and a manual webpack config from built from scratch.
+
+The application is tested and should work in **Google Chrome** & **Safari**.
 
 &nbsp;
 
@@ -15,6 +17,7 @@ This is a demo application for displaying cocktails and drinks. The application 
 ---
 
 - React.js https://reactjs.org/
+- Redux https://redux.js.org/
 - Webpack 4 https://webpack.js.org/
 - Babel https://babeljs.io/
 - Sass https://sass-lang.com/
