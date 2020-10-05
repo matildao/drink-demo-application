@@ -25,39 +25,6 @@
   margin: 5em;
 }
 
-/* Home Page */
-.home-page {
-  padding: 0 !important;
-}
-
-.home-page img {
-  width: 100%;
-}
-
-.homepage-section-1 {
-  padding: 2em 2em 3em 3em;
-  text-align: center;
-}
-
-.homepage-section-1 h1,
-.homepage-section-2 h1,
-.homepage-section-3 h1 {
-  font-family: 'Permanent Marker', cursive;
-}
-
-.homepage-section-2 {
-  padding: 5em;
-  background-color: $color1;
-  height: 30em;
-  text-align: center;
-}
-
-.homepage-section-3 {
-  padding: 5em;
-  height: 30em;
-  text-align: center;
-}
-
 .circle-container {
   display: flex;
   justify-content: space-evenly;

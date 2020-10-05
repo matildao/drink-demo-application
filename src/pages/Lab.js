@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from 'components/Card/Card';
 import HistoryBar from 'components/HistoryBar/HistoryBar';
-
-import SingleDrinkPage from 'pages/SingleDrinkPage/SingleDrinkPage';
 import 'style/pages.scss';
 
 function Lab() {
@@ -85,7 +83,6 @@ function Lab() {
     <div className="right-content lab">
       <h1>Lab Page</h1>
       <Card cardItem={tempCardItem} />
-      {/* <SingleDrinkPage drink={temp} /> */}
       <HistoryBar historyBarList={historyBarList} />
     </div>
   );

@@ -1,16 +1,12 @@
 import {
-  faDrumstickBite as fasDrumstickBite,
   faGlassMartiniAlt as fasGlassMartiniAlt,
   faChevronRight as fasChevronRight,
   faWineGlassAlt as fasWineGlassAlt,
   faGlassWhiskey as fasGlassWhiskey,
-  faCookieBite as fasCookieBite,
   faCocktail as fasCocktail,
   faBookOpen as fasBookOpen,
   faUtensils as fasUtensil,
-  faCarrot as fasCarrot,
   faHeart as fasHeart,
-  faFish as fasFish,
   faHome as fasHome,
   faBook as fasBook,
   faGlassCheers as fasGlassCheers,
@@ -31,12 +27,8 @@ import { faHeart as farHeart, faStar as farStar } from '@fortawesome/free-regula
 
 export default {
   //Solid
-  fasDrumstickBite,
-  fasFish,
-  fasCarrot,
   fasUtensil,
   fasBookOpen,
-  fasCookieBite,
   fasHeart,
   fasChevronRight,
   fasCocktail,

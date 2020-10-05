@@ -1,12 +1,12 @@
 @import 'style/colors.scss';
 
 .card-wrapper {
-  border: 2px solid #f3f3f3;
-  background-color: white;
+  border: 2px solid $paperBorder;
+  background-color: $paper;
   border-radius: 4px;
-  width: 18em;
-  margin: 1em;
-  flex-grow: 1;
+  padding: 10px;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .card-image {
@@ -32,7 +32,7 @@
 }
 
 .like-button:hover {
-  background-color: rgb(245, 245, 245);
+  background-color: $defaultHover;
   color: $mainAccent;
   transition: all 1s ease;
   cursor: pointer;

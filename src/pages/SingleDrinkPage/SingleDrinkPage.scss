@@ -8,19 +8,19 @@
 }
 
 .back-icon {
-  margin-bottom: 1em;
-  height: 50px;
   background-color: transparent;
+  margin-bottom: 1em;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   outline: none;
+  height: 50px;
   padding: 1em;
   border: none;
 }
 
 .back-icon:hover {
-  background-color: rgb(201, 201, 201);
+  background-color: $defaultButtonHover;
   transition: all 1.5s ease;
 }
 

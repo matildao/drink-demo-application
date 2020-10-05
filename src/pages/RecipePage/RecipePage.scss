@@ -1,31 +1,35 @@
-/* Recipe Page */
+@import 'style/mixins.scss';
+@import 'style/colors.scss';
 
 .recipes-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+  grid-gap: 1em;
+  min-height: 0;
+  min-width: 0;
 }
 
 .action-toolbar {
-  display: flex;
+  @include flex-row;
   margin-bottom: 2em;
 }
 
 .food-category-button {
-  background-color: rgb(216, 216, 216);
-  width: 4.5em;
-  height: 4.5em;
+  background-color: $defaultButton;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
+  height: 4.5em;
   outline: none;
+  width: 4.5em;
   padding: 1em;
   border: none;
   margin: 1em;
 }
 
 .no-favorites {
-  margin: 2em;
   font-size: 15pt;
+  margin: 2em;
 }
 
 .favorite-category-button {
@@ -34,9 +38,9 @@
 
 .food-category-button:hover {
   transition: all 1.5s ease;
-  background-color: pink;
+  background-color: $activeButton;
 }
 
 .active {
-  background-color: pink;
+  background-color: $activeButton;
 }

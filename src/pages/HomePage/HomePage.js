@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import 'style/pages.scss';
+import './HomePage.scss';
 
 function HomePage() {
   return (
