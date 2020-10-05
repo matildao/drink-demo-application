@@ -1,6 +1,6 @@
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-<!-- ![alt text](https://github.com/matildao/drink-demo-application/blob/master/public/vue_image_gallery.png "Image is currently not available") -->
+![alt text](https://github.com/matildao/drink-demo-application/blob/master/public/drink-app-1.gif 'Image is currently not available')
 
 &nbsp;
 
@@ -30,10 +30,12 @@ This is a demo application for displaying cocktails and drinks. The application 
 ---
 
 - View different kinds of drinks from different categories
-- Favorite a drink (saves in browser session)
-- Display restaurants/bars
+- Favorite a drink (saved in browser session)
+- Mark a drink as "tested" (saved in browser session)
+- "Date a drink" tinder your way to your favorite drink
 - Random generate a drink
 - View drink recepies
+  - View specific drink recipe details
 
 &nbsp;
 
